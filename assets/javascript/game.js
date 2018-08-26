@@ -5,10 +5,6 @@ $(function () {
     let randomNum = (Math.floor(Math.random() * 102) + 19);
     let win = 0;
     let loss = 0;
-    let winLoss = {
-        win: "Wow. You won. Do you want a cookie or something?",
-        loss: "Damn, you suck..."
-    };
     let crystal = {
         one: (Math.floor(Math.random() * 12) + 1),
         two: (Math.floor(Math.random() * 12) + 1),
@@ -20,11 +16,12 @@ $(function () {
 
 
     // cached DOM elements
-    console.log(randomNum);
+    $("#ranNum").text(randomNum);
 
 
     // event listeners --- connecting buttons to random number
     $(".button").on("click", function game() {
+        $("#phrase").html("");
 
         if ($(this).hasClass("btn1")) {
             score += crystal.one;
@@ -42,19 +39,43 @@ $(function () {
             score += crystal.four;
             console.log(crystal.four);
         }
-        console.log(score);
+
+        $("#scoreShow").text(score);
+
         if (score === randomNum) {
             win++;
+            $("#phrase").html("Wow. You won. Do you want a cookie or something?");
+            $("#winBox").html(win);
+            crystal.one = (Math.floor(Math.random() * 12) + 1);
+            crystal.two = (Math.floor(Math.random() * 12) + 1);
+            crystal.three = (Math.floor(Math.random() * 12) + 1);
+            crystal.four = (Math.floor(Math.random() * 12) + 1);
+            randomNum = (Math.floor(Math.random() * 102) + 19);
+            score = 0;
+            console.log(win);
         }
+        if (score > randomNum) {
+            loss++;
+            $("#phrase").html("Damn, you suck...");
+            $("#lossBox").html(loss);
+            crystal.one = (Math.floor(Math.random() * 12) + 1);
+            crystal.two = (Math.floor(Math.random() * 12) + 1);
+            crystal.three = (Math.floor(Math.random() * 12) + 1);
+            crystal.four = (Math.floor(Math.random() * 12) + 1);
+            randomNum = (Math.floor(Math.random() * 102) + 19);
+            score = 0;
+        }
+
+        $("#scoreShow").html(score);
+        $("#ranNum").html(randomNum);
     });
 
-
     // functions
-    
+
 
 
     // checking winner
-    
+
 
     // initalize
 

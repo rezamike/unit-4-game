@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
     <title>Crystal Collector</title>
@@ -36,19 +36,25 @@
             </p>
         </div>
         <div class="row">
-            <div class="col-md">
-                <h3>Random Numer: </h3>
-                <p id="RanNum"></p>
+            <div class="col-md ranNumbox">
+                <h3>Random Number: </h3>
+                <p><span id="ranNum"></span></p>
             </div>
-            <div class="col-md">
-                <p id="winLossBox"></p>
+            <div class="col-md winLossbox">
+                <p><span id="phrase"></span></p>
+                <p>Wins: <span id="winBox"></span> </p>
+                <p>Losses: <span id="lossBox"></span></p>
             </div>
         </div>
-    </div>
-    <img class="button btn1" src="assets/images/Fire_Stone_anime.png" />
-    <img class="button btn2" src="assets/images/Moon_Stone_anime.png" />
-    <img class="button btn3" src="assets/images/Thunder_Stone_anime.png" />
-    <img class="button btn4" src="assets/images/Water_Stone_anime.png" />
+        <div class="row">
+            <img class="button btn1" src="assets/images/Fire_Stone_anime.png" />
+            <img class="button btn2" src="assets/images/Moon_Stone_anime.png" />
+            <img class="button btn3" src="assets/images/Thunder_Stone_anime.png" />
+            <img class="button btn4" src="assets/images/Water_Stone_anime.png" />
+        </div>
+        <div class="row">
+            <h3>Score: <span id="scoreShow"></span></h3>
+        </div>
     </div>
 
 

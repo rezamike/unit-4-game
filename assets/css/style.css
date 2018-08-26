@@ -2,3 +2,9 @@
     width: auto;
     height: 150px;
 }
+
+.ranNumbox, .winLossbox, #scoreShow {
+    width: 150px;
+    height: 150px;
+    background-color: lemonchiffon;
+}
