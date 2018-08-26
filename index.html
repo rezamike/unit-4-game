@@ -16,34 +16,38 @@
 
 <body>
 
+    <h1>Stones of Evolution!</h1>
+    <br>
+    <br>
     <div class="container">
-        <div class="row">
-            <h1>Stones of Evolution!</h1>
-        </div>
-        <div class="row">
-            <h2>Instructions</h2>
-            <hr>
-            <br>
-            <br>
-            <p>
-                You will be given a random number at the start of the game.
-                <br> There are four Elemental Stones below. By clicking on a stone you will add a specific amount of points
-                to your total score.
-                <br> You win the game by matching your total score to the random number. You lose the game if your total
-                score goes above the random number.
-                <br> The value of each crystal is hidden from you until you click on it.
-                <br> Each time when the game starts, the game will change the value of each crystal.
-            </p>
-        </div>
-        <div class="row">
-            <div class="col-md ranNumbox">
-                <h3>Random Number: </h3>
-                <p><span id="ranNum"></span></p>
+        <div class="row instructions">
+            <div class="col-sm-7">
+                <h2>Instructions</h2>
+                <br>
+                <p>
+                    You will be given a random number at the start of the game.
+                    <br> There are four Elemental Stones below. By clicking on a stone you will add a specific amount of
+                    points to your total score.
+                    <br> You win the game by matching your total score to the random number. You lose the game if your total
+                    score goes above the random number.
+                    <br> The value of each crystal is hidden from you until you click on it.
+                    <br> Each time when the game starts, the game will change the value of each crystal.
+                </p>
             </div>
-            <div class="col-md winLossbox">
-                <p><span id="phrase"></span></p>
-                <p>Wins: <span id="winBox"></span> </p>
-                <p>Losses: <span id="lossBox"></span></p>
+            <div class="col-sm-5">
+                <div class="row">
+                    <div class="col-md ranNumbox">
+                        <h3>Random Number: <span id="ranNum"></span></h3>
+                    </div>
+                    <div class="col-md winLossbox">
+                        <h4><span id="phrase"></span></h4>
+                        <h5>Wins: <span id="winBox"></span></h5>
+                        <h5>Losses: <span id="lossBox"></span></h5>
+                    </div>
+                </div>
+                <div class="row scoreBox">
+                    <h3>Score: <span id="scoreShow"></span></h3>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -51,9 +55,6 @@
             <img class="button btn2" src="assets/images/Moon_Stone_anime.png" />
             <img class="button btn3" src="assets/images/Thunder_Stone_anime.png" />
             <img class="button btn4" src="assets/images/Water_Stone_anime.png" />
-        </div>
-        <div class="row">
-            <h3>Score: <span id="scoreShow"></span></h3>
         </div>
     </div>
 
